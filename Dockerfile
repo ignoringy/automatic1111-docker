@@ -3,23 +3,22 @@ FROM nvidia/cuda:12.2.0-base-ubuntu22.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y && \
-    apt-get install -y git
-RUN adduser --disabled-password --gecos '' user && \
+    apt-get install -y git && \
+    adduser --disabled-password --gecos '' user && \
     mkdir /content && \
-    chown -R user:user /content
-RUN apt-get install -y aria2 libgl1 libglib2.0-0 wget git git-lfs python3-pip python-is-python3 
-RUN pip install -q torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 torchtext==0.15.2 torchdata==0.6.1 --extra-index-url https://download.pytorch.org/whl/cu121
-RUN pip install packaging==23.1
-
+    chown -R user:user /content && \
+    apt-get install -y aria2 libgl1 libglib2.0-0 wget git git-lfs python3-pip python-is-python3 && \
+    pip install -q torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 torchtext==0.15.2 torchdata==0.6.1 --extra-index-url https://download.pytorch.org/whl/cu121 && \
+    pip install packaging==23.1
 
 WORKDIR /content
 USER user
 
-RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /content/webui
-RUN git clone https://github.com/Iyashinouta/sd-model-downloader /content/webui/extensions/sd-model-downloader
-RUN	git clone https://github.com/etherealxx/batchlinks-webui /content/webui/extensions/batchlinks-webui
-RUN git clone https://github.com/Mikubill/sd-webui-controlnet /content/webui/extensions/sd-webui-controlnet
-RUN git clone https://github.com/fkunn1326/openpose-editor /content/webui/extensions/openpose-editor
+RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /content/webui && \
+    git clone https://github.com/Iyashinouta/sd-model-downloader /content/webui/extensions/sd-model-downloader && \
+    git clone https://github.com/etherealxx/batchlinks-webui /content/webui/extensions/batchlinks-webui && \
+    git clone https://github.com/Mikubill/sd-webui-controlnet /content/webui/extensions/sd-webui-controlnet && \
+    git clone https://github.com/fkunn1326/openpose-editor /content/webui/extensions/openpose-editor
 
 ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_canny-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_canny-fp16.safetensors
 ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_depth-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_depth-fp16.safetensors
