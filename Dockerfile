@@ -25,7 +25,7 @@ RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /content/w
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_hed-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_hed-fp16.safetensors
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_mlsd-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_mlsd-fp16.safetensors
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_normal-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_normal-fp16.safetensors
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_openpose-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_openpose-fp16.safetensors
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_openpose-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_openpose-fp16.safetensors
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_scribble-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_scribble-fp16.safetensors
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_seg-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_seg-fp16.safetensors
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/hand_pose_model.pth /content/webui/extensions/sd-webui-controlnet/annotator/openpose/hand_pose_model.pth
@@ -38,7 +38,7 @@ ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_ope
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_style_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_style_sd14v1.pth
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_sketch_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_sketch_sd14v1.pth
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_seg_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_seg_sd14v1.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_openpose_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_openpose_sd14v1.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_openpose_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_openpose_sd14v1.pth
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_keypose_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_keypose_sd14v1.pth
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_depth_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_depth_sd14v1.pth
 #ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_color_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_color_sd14v1.pth
@@ -50,7 +50,7 @@ RUN sed -i -e 's/    start()/    #start()/g' /content/webui/launch.py && \
     python launch.py --skip-torch-cuda-test && \
     git reset --hard
 
-ADD --chown=user https://huggingface.co/ckpt/sd15/resolve/main/v1-5-pruned-emaonly.ckpt /content/webui/models/Stable-diffusion/v1-5-pruned-emaonly.ckpt
+#ADD --chown=user https://huggingface.co/ckpt/sd15/resolve/main/v1-5-pruned-emaonly.ckpt /content/webui/models/Stable-diffusion/v1-5-pruned-emaonly.ckpt
 EXPOSE 7860
 
 CMD cd /content/webui && python webui.py --xformers --listen --enable-insecure-extension-access --gradio-queue
