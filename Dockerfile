@@ -20,29 +20,29 @@ RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /content/w
     git clone https://github.com/Mikubill/sd-webui-controlnet /content/webui/extensions/sd-webui-controlnet && \
     git clone https://github.com/fkunn1326/openpose-editor /content/webui/extensions/openpose-editor
 
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_canny-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_canny-fp16.safetensors
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_depth-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_depth-fp16.safetensors
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_hed-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_hed-fp16.safetensors
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_mlsd-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_mlsd-fp16.safetensors
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_normal-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_normal-fp16.safetensors
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_canny-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_canny-fp16.safetensors
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_depth-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_depth-fp16.safetensors
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_hed-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_hed-fp16.safetensors
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_mlsd-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_mlsd-fp16.safetensors
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_normal-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_normal-fp16.safetensors
 ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_openpose-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_openpose-fp16.safetensors
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_scribble-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_scribble-fp16.safetensors
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_seg-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_seg-fp16.safetensors
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/hand_pose_model.pth /content/webui/extensions/sd-webui-controlnet/annotator/openpose/hand_pose_model.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/body_pose_model.pth /content/webui/extensions/sd-webui-controlnet/annotator/openpose/body_pose_model.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/dpt_hybrid-midas-501f0c75.pt /content/webui/extensions/sd-webui-controlnet/annotator/midas/dpt_hybrid-midas-501f0c75.pt
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/mlsd_large_512_fp32.pth /content/webui/extensions/sd-webui-controlnet/annotator/mlsd/mlsd_large_512_fp32.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/mlsd_tiny_512_fp32.pth /content/webui/extensions/sd-webui-controlnet/annotator/mlsd/mlsd_tiny_512_fp32.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/network-bsds500.pth /content/webui/extensions/sd-webui-controlnet/annotator/hed/network-bsds500.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/upernet_global_small.pth /content/webui/extensions/sd-webui-controlnet/annotator/uniformer/upernet_global_small.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_style_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_style_sd14v1.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_sketch_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_sketch_sd14v1.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_seg_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_seg_sd14v1.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_scribble-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_scribble-fp16.safetensors
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/control_seg-fp16.safetensors /content/webui/extensions/sd-webui-controlnet/models/control_seg-fp16.safetensors
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/hand_pose_model.pth /content/webui/extensions/sd-webui-controlnet/annotator/openpose/hand_pose_model.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/body_pose_model.pth /content/webui/extensions/sd-webui-controlnet/annotator/openpose/body_pose_model.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/dpt_hybrid-midas-501f0c75.pt /content/webui/extensions/sd-webui-controlnet/annotator/midas/dpt_hybrid-midas-501f0c75.pt
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/mlsd_large_512_fp32.pth /content/webui/extensions/sd-webui-controlnet/annotator/mlsd/mlsd_large_512_fp32.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/mlsd_tiny_512_fp32.pth /content/webui/extensions/sd-webui-controlnet/annotator/mlsd/mlsd_tiny_512_fp32.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/network-bsds500.pth /content/webui/extensions/sd-webui-controlnet/annotator/hed/network-bsds500.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/upernet_global_small.pth /content/webui/extensions/sd-webui-controlnet/annotator/uniformer/upernet_global_small.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_style_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_style_sd14v1.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_sketch_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_sketch_sd14v1.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_seg_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_seg_sd14v1.pth
 ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_openpose_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_openpose_sd14v1.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_keypose_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_keypose_sd14v1.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_depth_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_depth_sd14v1.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_color_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_color_sd14v1.pth
-ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_canny_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_canny_sd14v1.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_keypose_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_keypose_sd14v1.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_depth_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_depth_sd14v1.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_color_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_color_sd14v1.pth
+#ADD --chown=user https://huggingface.co/ckpt/ControlNet/resolve/main/t2iadapter_canny_sd14v1.pth /content/webui/extensions/sd-webui-controlnet/models/t2iadapter_canny_sd14v1.pth
 
 
 RUN sed -i -e 's/    start()/    #start()/g' /content/webui/launch.py && \
